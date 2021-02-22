@@ -34,11 +34,33 @@ const home = () => {
       </View>
     );
   };
+  const renderHeader = () => {
+    return (
+      <View
+        style={{
+          paddingHorizontal: SIZES.padding,
+          paddingVertical: SIZES.padding,
+          backgroundColor: COLORS.white,
+        }}>
+        <View>
+          <Text
+            style={{color: COLORS.primary, ...FONTS.h2, fontWeight: 'bold'}}>
+            My Expenses
+          </Text>
+          <Text style={{color: COLORS.darkgray, ...FONTS.h3}}>
+            Summary (private)
+          </Text>
+        </View>
+      </View>
+    );
+  };
 
   return (
     <View style={{flex: 1, backgroundColor: COLORS.lightGray2}}>
       {/* Nav bar Section */}
       {renderNavBar()}
+      {/* Header Section */}
+      {renderHeader()}
     </View>
   );
 };
