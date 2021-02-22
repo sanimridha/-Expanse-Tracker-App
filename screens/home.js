@@ -85,7 +85,17 @@ const home = () => {
       </View>
     );
   };
-  const renderCategoryHeaderSection = () => {};
+  const renderCategoryHeaderSection = () => {
+    return (
+      <View>
+        {/* Total */}
+        <View>
+          <Text>CATEGORIES</Text>
+          <Text> Total</Text>
+        </View>
+      </View>
+    );
+  };
 
   return (
     <View style={{flex: 1, backgroundColor: COLORS.lightGray2}}>
