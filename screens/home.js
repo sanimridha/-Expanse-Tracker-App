@@ -87,7 +87,13 @@ const home = () => {
   };
   const renderCategoryHeaderSection = () => {
     return (
-      <View>
+      <View
+        style={{
+          flexDirection: 'row',
+          padding: SIZES.padding,
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}>
         {/* Total */}
         <View>
           <Text>CATEGORIES</Text>
