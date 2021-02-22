@@ -51,6 +51,37 @@ const home = () => {
             Summary (private)
           </Text>
         </View>
+        <View
+          style={{
+            flexDirection: 'row',
+            marginTop: SIZES.padding,
+            alignItems: 'center',
+          }}>
+          <View
+            style={{
+              height: 50,
+              width: 50,
+              backgroundColor: COLORS.lightGray,
+              borderRadius: 25,
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
+            <Image
+              source={icons.calendar}
+              resizeMode={'contain'}
+              style={{width: 20, height: 20, tintColor: COLORS.lightBlue}}
+            />
+          </View>
+          <View style={{marginLeft: SIZES.padding}}>
+            <Text
+              style={{color: COLORS.primary, ...FONTS.h3, fontWeight: 'bold'}}>
+              22 Feb 2021
+            </Text>
+            <Text style={{...FONTS.body3, color: COLORS.darkgray}}>
+              15% more then last month
+            </Text>
+          </View>
+        </View>
       </View>
     );
   };
