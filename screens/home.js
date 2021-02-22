@@ -103,15 +103,31 @@ const home = () => {
           <Text style={{color: COLORS.darkgray, ...FONTS.body4}}> Total</Text>
         </View>
         {/* Buttons */}
-        <View>
-          <TouchableOpacity>
+        <View style={{flexDirection: 'row'}}>
+          <TouchableOpacity
+            style={{
+              alignItems: 'center',
+              justifyContent: 'center',
+              height: 50,
+              width: 50,
+              backgroundColor: COLORS.secondary,
+              borderRadius: 25,
+            }}>
             <Image
               source={icons.chart}
               resizeMode="contain"
               style={{width: 20, height: 20}}
             />
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity
+            style={{
+              alignItems: 'center',
+              justifyContent: 'center',
+              height: 50,
+              width: 50,
+              backgroundColor: COLORS.secondary,
+              borderRadius: 25,
+            }}>
             <Image
               source={icons.menu}
               resizeMode="contain"
