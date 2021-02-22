@@ -93,6 +93,16 @@ const home = () => {
           <Text>CATEGORIES</Text>
           <Text> Total</Text>
         </View>
+        {/* Buttons */}
+        <View>
+          <TouchableOpacity>
+            <Image
+              source={icons.chart}
+              resizeMode="contain"
+              style={{width: 20, height: 20}}
+            />
+          </TouchableOpacity>
+        </View>
       </View>
     );
   };
