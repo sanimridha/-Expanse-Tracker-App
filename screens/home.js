@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View, Image} from 'react-native';
 import {COLORS, SIZES, FONTS, icons} from '../constants';
 const home = () => {
+  //   const [viewMode, setViewMode] = useState('chart');
+  const [viewMode, setViewMode] = useState('chart');
   const renderNavBar = () => {
     return (
       <View
@@ -110,13 +112,18 @@ const home = () => {
               justifyContent: 'center',
               height: 50,
               width: 50,
-              backgroundColor: COLORS.secondary,
+              backgroundColor: viewMode == 'chart' ? COLORS.secondary : null,
               borderRadius: 25,
-            }}>
+            }}
+            onPress={() => (setViewMode = 'chart')}>
             <Image
               source={icons.chart}
               resizeMode="contain"
-              style={{width: 20, height: 20}}
+              style={{
+                width: 20,
+                height: 20,
+                tintColor: viewMode == 'chart' ? COLORS.white : COLORS.darkgray,
+              }}
             />
           </TouchableOpacity>
           <TouchableOpacity
@@ -125,13 +132,20 @@ const home = () => {
               justifyContent: 'center',
               height: 50,
               width: 50,
-              backgroundColor: COLORS.secondary,
+              backgroundColor: viewMode == 'list' ? COLORS.secondary : null,
               borderRadius: 25,
+            }}
+            onPress={() => {
+              setViewMode = 'list';
             }}>
             <Image
               source={icons.menu}
               resizeMode="contain"
-              style={{width: 20, height: 20}}
+              style={{
+                width: 20,
+                height: 20,
+                tintColor: viewMode == 'list' ? COLORS.white : COLORS.darkgray,
+              }}
             />
           </TouchableOpacity>
         </View>
