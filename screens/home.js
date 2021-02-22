@@ -96,8 +96,11 @@ const home = () => {
         }}>
         {/* Total */}
         <View>
-          <Text>CATEGORIES</Text>
-          <Text> Total</Text>
+          <Text
+            style={{color: COLORS.primary, ...FONTS.h3, fontWeight: 'bold'}}>
+            CATEGORIES
+          </Text>
+          <Text style={{color: COLORS.darkgray, ...FONTS.body4}}> Total</Text>
         </View>
         {/* Buttons */}
         <View>
