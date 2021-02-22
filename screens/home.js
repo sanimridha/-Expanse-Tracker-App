@@ -102,6 +102,13 @@ const home = () => {
               style={{width: 20, height: 20}}
             />
           </TouchableOpacity>
+          <TouchableOpacity>
+            <Image
+              source={icons.menu}
+              resizeMode="contain"
+              style={{width: 20, height: 20}}
+            />
+          </TouchableOpacity>
         </View>
       </View>
     );
