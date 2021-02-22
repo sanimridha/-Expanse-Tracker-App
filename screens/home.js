@@ -85,6 +85,7 @@ const home = () => {
       </View>
     );
   };
+  const renderCategoryHeaderSection = () => {};
 
   return (
     <View style={{flex: 1, backgroundColor: COLORS.lightGray2}}>
@@ -92,6 +93,8 @@ const home = () => {
       {renderNavBar()}
       {/* Header Section */}
       {renderHeader()}
+      {/* Category Header Section */}
+      {renderCategoryHeaderSection()}
     </View>
   );
 };
