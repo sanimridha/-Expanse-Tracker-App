@@ -2,6 +2,51 @@ import React, {useState} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View, Image} from 'react-native';
 import {COLORS, SIZES, FONTS, icons} from '../constants';
 const home = () => {
+  //Dummy data
+  const confirmStatus = 'C';
+  const pendingStatus = 'P';
+  let categoriesData = [
+    {
+      id: 1,
+      name: 'Education',
+      icon: icons.education,
+      color: COLORS.yellow,
+      expenses: [
+        {
+          id: 1,
+          title: 'Tuition Fee',
+          description: 'Tuition fee',
+          location: "Mohammadpur' tuition center",
+          total: 100.0,
+          status: pendingStatus,
+        },
+        {
+          id: 2,
+          title: 'Arduino',
+          description: 'Hardward',
+          location: "Shyamoli' tuition center",
+          total: 30.0,
+          status: pendingStatus,
+        },
+        {
+          id: 3,
+          title: 'Javascript Books',
+          description: 'Javascript books',
+          location: "Farmgate' Book Store",
+          total: 20.0,
+          status: confirmStatus,
+        },
+        {
+          id: 4,
+          title: 'C-Sharp Books',
+          description: 'C-Sharp books',
+          location: "Gulshan' Book Store",
+          total: 20.0,
+          status: confirmStatus,
+        },
+      ],
+    },
+  ];
   const [viewMode, setViewMode] = useState('chart');
   const renderNavBar = () => {
     return (
