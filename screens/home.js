@@ -8,6 +8,7 @@ import {
   ScrollView,
   FlatList,
 } from 'react-native';
+import {sqrt} from 'react-native-reanimated';
 import {COLORS, SIZES, FONTS, icons} from '../constants';
 const home = () => {
   //Dummy data
@@ -370,6 +371,7 @@ const home = () => {
             paddingHorizontal: SIZES.padding,
             borderRadius: 5,
             backgroundColor: COLORS.white,
+            ...styles.shadow,
           }}>
           <Image
             source={item.icon}
@@ -418,6 +420,17 @@ const home = () => {
   );
 };
 
-export default home;
+const styles = StyleSheet.create({
+  shadow: {
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 2,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 3,
+  },
+});
 
-const styles = StyleSheet.create({});
+export default home;
