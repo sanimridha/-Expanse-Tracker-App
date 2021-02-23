@@ -445,6 +445,10 @@ const home = () => {
     );
   };
 
+  const renderIncomingExpenses = () => {
+    <View></View>;
+  };
+
   return (
     <View style={{flex: 1, backgroundColor: COLORS.lightGray2}}>
       {/* Nav bar Section */}
@@ -455,7 +459,12 @@ const home = () => {
       {renderCategoryHeaderSection()}
 
       <ScrollView contentContainerStyle={{paddingBottom: 60}}>
-        {viewMode == 'list' && <View>{renderCategoryList()}</View>}
+        {viewMode == 'list' && (
+          <View>
+            {renderCategoryList()}
+            {renderIncomingExpenses()}
+          </View>
+        )}
       </ScrollView>
     </View>
   );
