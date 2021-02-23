@@ -359,6 +359,17 @@ const home = () => {
     );
   };
   const renderCategoryList = () => {
+    const renderItem = ({item}) => {
+      return (
+        <TouchableOpacity>
+          <Image
+            source={item.icon}
+            style={{width: 20, height: 20, tintColor: item.color}}
+          />
+        </TouchableOpacity>
+      );
+    };
+
     return (
       <View>
         <View>
