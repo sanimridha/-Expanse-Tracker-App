@@ -151,6 +151,30 @@ const home = () => {
         },
       ],
     },
+    {
+      id: 5,
+      name: 'Sports',
+      icon: icons.sports_icon,
+      color: COLORS.purple,
+      expenses: [
+        {
+          id: 15,
+          title: 'Gym Membership',
+          description: 'Monthly Fee',
+          location: "Bangla-Motor' Gym",
+          total: 45.0,
+          status: pendingStatus,
+        },
+        {
+          id: 16,
+          title: 'Gloves',
+          description: 'Gym Equipment',
+          location: "Panthapath' Gym",
+          total: 15.0,
+          status: confirmStatus,
+        },
+      ],
+    },
   ];
   const [viewMode, setViewMode] = useState('chart');
   const renderNavBar = () => {
