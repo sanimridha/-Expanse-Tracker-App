@@ -622,6 +622,19 @@ const home = () => {
 
     //calculate the total expenses
     let totalExpenses = filterChartData.reduce((a, b) => a + (b.y || 0), 0);
+
+    //calculate percentage and repopulate chart data
+    let finalChartData = filterChartData.map((item) => {
+      let percentage = ((item.y / totalExpenses) * 100).toFixed(0);
+      return {
+        label: `${percentage}%`,
+        y: Number(item.y),
+        expenseCount: item.expensesCount,
+        color: item.color,
+        name: item.name,
+        id: item.id,
+      };
+    });
   };
 
   const renderChart = () => {
