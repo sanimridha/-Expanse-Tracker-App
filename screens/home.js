@@ -412,6 +412,19 @@ const home = () => {
             justifyContent: 'center',
           }}
           onPress={() => {
+            if (showMoreToggle) {
+              Animated.timing(categoryListHeightAnimationValue, {
+                toValue: 115,
+                duration: 500,
+                useNativeDriver: false,
+              }).start();
+            } else {
+              Animated.timing(categoryListHeightAnimationValue, {
+                toValue: 172.5,
+                duration: 500,
+                useNativeDriver: false,
+              }).start();
+            }
             setShowMoreToggle(!showMoreToggle);
           }}>
           <Text style={{...FONTS.body4}}>
