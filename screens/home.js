@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View, Image} from 'react-native';
 import {COLORS, SIZES, FONTS, icons} from '../constants';
 const home = () => {
-  //   const [viewMode, setViewMode] = useState('chart');
   const [viewMode, setViewMode] = useState('chart');
   const renderNavBar = () => {
     return (
@@ -115,7 +114,7 @@ const home = () => {
               backgroundColor: viewMode == 'chart' ? COLORS.secondary : null,
               borderRadius: 25,
             }}
-            onPress={() => (setViewMode = 'chart')}>
+            onPress={() => setViewMode('chart')}>
             <Image
               source={icons.chart}
               resizeMode="contain"
@@ -135,9 +134,7 @@ const home = () => {
               backgroundColor: viewMode == 'list' ? COLORS.secondary : null,
               borderRadius: 25,
             }}
-            onPress={() => {
-              setViewMode = 'list';
-            }}>
+            onPress={() => setViewMode('list')}>
             <Image
               source={icons.menu}
               resizeMode="contain"
