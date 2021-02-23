@@ -563,7 +563,10 @@ const home = () => {
               borderBottomEndRadius: SIZES.radius,
               backgroundColor: selectedCategory.color,
             }}>
-            <Text>CONFIRM {item.total.toFixed(2)} USD</Text>
+            <Text
+              style={{color: COLORS.white, ...FONTS.body3, fontWeight: 'bold'}}>
+              CONFIRM {item.total.toFixed(2)} USD
+            </Text>
           </View>
         </View>
       );
