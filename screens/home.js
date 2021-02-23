@@ -515,7 +515,14 @@ const home = () => {
               {item.description}
             </Text>
             {/* location */}
-            <Text>Location</Text>
+            <Text
+              style={{
+                marginTop: SIZES.padding,
+                ...FONTS.h4,
+                fontWeight: 'bold',
+              }}>
+              Location
+            </Text>
             <View style={{flexDirection: 'row'}}>
               <Image
                 source={icons.pin}
