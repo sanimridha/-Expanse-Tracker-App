@@ -415,7 +415,7 @@ const home = () => {
             {showMoreToggle ? 'Less' : 'More'}
           </Text>
           <Image
-            source={icons.down_arrow}
+            source={showMoreToggle ? icons.up_arrow : icons.down_arrow}
             resizeMode={'contain'}
             style={{
               marginLeft: 5,
