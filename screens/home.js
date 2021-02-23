@@ -366,6 +366,7 @@ const home = () => {
             source={item.icon}
             style={{width: 20, height: 20, tintColor: item.color}}
           />
+          <Text>{item.name}</Text>
         </TouchableOpacity>
       );
     };
