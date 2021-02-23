@@ -401,6 +401,19 @@ const home = () => {
             numColumns={2}
           />
         </View>
+        <TouchableOpacity>
+          <Text>MORE</Text>
+          <Image
+            source={icons.down_arrow}
+            resizeMode={'contain'}
+            style={{
+              marginLeft: 5,
+              width: 15,
+              height: 15,
+              alignSelf: 'center',
+            }}
+          />
+        </TouchableOpacity>
       </View>
     );
   };
