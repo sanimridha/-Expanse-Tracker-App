@@ -527,7 +527,14 @@ const home = () => {
                   marginRight: 5,
                 }}
               />
-              <Text>{item.location}</Text>
+              <Text
+                style={{
+                  marginBottom: SIZES.base,
+                  color: COLORS.darkgray,
+                  ...FONTS.body4,
+                }}>
+                {item.location}
+              </Text>
             </View>
           </View>
         </View>
