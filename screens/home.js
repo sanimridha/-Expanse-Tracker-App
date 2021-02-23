@@ -516,7 +516,7 @@ const home = () => {
             </Text>
             {/* location */}
             <Text>Location</Text>
-            <View>
+            <View style={{flexDirection: 'row'}}>
               <Image
                 source={icons.pin}
                 resizeMode={'contain'}
