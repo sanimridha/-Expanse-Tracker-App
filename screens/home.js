@@ -605,6 +605,18 @@ const home = () => {
   };
   const processCategoryDataToDisplay = () => {
     //filter Expenses with confirmed status
+    let chartData = categories.map((item) => {
+      let confirmExpenses = item.expenses.filter((a) => a.status == 'C');
+      var total = confirmExpenses.reduce((a, b) => a + (b.total || 0), 0);
+
+      return {
+        name: item.name,
+        y: total,
+        expensesCount: confirmExpenses.length,
+        color: item.color,
+        id: item.id,
+      };
+    });
   };
 
   const renderChart = () => {
