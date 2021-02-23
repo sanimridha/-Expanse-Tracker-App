@@ -6,6 +6,7 @@ import {
   View,
   Image,
   ScrollView,
+  FlatList,
 } from 'react-native';
 import {COLORS, SIZES, FONTS, icons} from '../constants';
 const home = () => {
@@ -357,7 +358,20 @@ const home = () => {
       </View>
     );
   };
-  const renderCategoryList = () => {};
+  const renderCategoryList = () => {
+    return (
+      <View>
+        <View>
+          <FlatList
+            data={categories}
+            renderItem={renderItem}
+            keyExtractor={(item) => `${item.id}`}
+            numColumns={2}
+          />
+        </View>
+      </View>
+    );
+  };
 
   return (
     <View style={{flex: 1, backgroundColor: COLORS.lightGray2}}>
