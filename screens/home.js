@@ -1,5 +1,12 @@
 import React, {useState} from 'react';
-import {StyleSheet, Text, TouchableOpacity, View, Image} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+  Image,
+  ScrollView,
+} from 'react-native';
 import {COLORS, SIZES, FONTS, icons} from '../constants';
 const home = () => {
   //Dummy data
@@ -350,6 +357,7 @@ const home = () => {
       </View>
     );
   };
+  const renderCategoryList = () => {};
 
   return (
     <View style={{flex: 1, backgroundColor: COLORS.lightGray2}}>
@@ -359,6 +367,10 @@ const home = () => {
       {renderHeader()}
       {/* Category Header Section */}
       {renderCategoryHeaderSection()}
+
+      <ScrollView contentContainerStyle={{paddingBottom: 60}}>
+        {viewMode == 'list' && <View>{renderCategoryList()}</View>}
+      </ScrollView>
     </View>
   );
 };
