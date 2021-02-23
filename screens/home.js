@@ -211,6 +211,7 @@ const home = () => {
   const [categories, setcategories] = useState(categoriesData);
   const [viewMode, setViewMode] = useState('chart');
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [showMoreToggle, setShowMoreToggle] = useState(false);
   const renderNavBar = () => {
     return (
       <View
@@ -406,8 +407,13 @@ const home = () => {
             flexDirection: 'row',
             marginVertical: SIZES.base,
             justifyContent: 'center',
+          }}
+          onPress={() => {
+            setShowMoreToggle(!showMoreToggle);
           }}>
-          <Text style={{...FONTS.body4}}>More</Text>
+          <Text style={{...FONTS.body4}}>
+            {showMoreToggle ? 'Less' : 'More'}
+          </Text>
           <Image
             source={icons.down_arrow}
             resizeMode={'contain'}
