@@ -619,6 +619,9 @@ const home = () => {
     });
     //Filter out categories with no data/expenses
     let filterChartData = chartData.filter((a) => a.y > 0);
+
+    //calculate the total expenses
+    let totalExpenses = filterChartData.reduce((a, b) => a + (b.y || 0), 0);
   };
 
   const renderChart = () => {
