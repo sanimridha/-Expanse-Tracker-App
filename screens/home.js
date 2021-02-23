@@ -667,8 +667,17 @@ const home = () => {
           height={SIZES.width * 0.8}
         />
         <View>
-          <Text>{totalExpensesCount}</Text>
-          <Text>Expenses</Text>
+          <Text style={{...FONTS.h1, textAlign: 'center', fontWeight: 'bold'}}>
+            {totalExpensesCount}
+          </Text>
+          <Text
+            style={{
+              ...FONTS.body3,
+              textAlign: 'center',
+              color: COLORS.darkgray,
+            }}>
+            Expenses
+          </Text>
         </View>
       </View>
     );
