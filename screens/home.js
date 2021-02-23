@@ -175,6 +175,30 @@ const home = () => {
         },
       ],
     },
+    {
+      id: 6,
+      name: 'Clothing',
+      icon: icons.cloth_icon,
+      color: COLORS.red,
+      expenses: [
+        {
+          id: 17,
+          title: 'T-Shirt',
+          description: 'Plain Color T-Shirt',
+          location: "Estern Plaza' Mall",
+          total: 20.0,
+          status: pendingStatus,
+        },
+        {
+          id: 18,
+          title: 'Jeans',
+          description: 'Blue Jeans',
+          location: "Suvastu-Tower' Mall",
+          total: 50.0,
+          status: confirmStatus,
+        },
+      ],
+    },
   ];
   const [viewMode, setViewMode] = useState('chart');
   const renderNavBar = () => {
