@@ -640,9 +640,10 @@ const home = () => {
 
   const renderChart = () => {
     let chartData = processCategoryDataToDisplay();
+    let colorScales = chartData.map((item) => item.color);
     return (
       <View>
-        <VictoryPie data={chartData} />
+        <VictoryPie data={chartData} colorScale={colorScales} />
       </View>
     );
   };
