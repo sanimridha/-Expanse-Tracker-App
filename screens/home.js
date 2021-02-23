@@ -643,7 +643,7 @@ const home = () => {
     let chartData = processCategoryDataToDisplay();
     let colorScales = chartData.map((item) => item.color);
     return (
-      <View>
+      <View style={{alignItems: 'center', justifyContent: 'center'}}>
         <VictoryPie
           data={chartData}
           colorScale={colorScales}
