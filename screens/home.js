@@ -502,6 +502,11 @@ const home = () => {
               {selectedCategory.name}
             </Text>
           </View>
+          {/* Expenses Description */}
+          <View>
+            <Text>{item.title}</Text>
+            <Text>{item.description}</Text>
+          </View>
         </View>
       );
     };
