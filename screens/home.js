@@ -527,6 +527,7 @@ const home = () => {
                   marginRight: 5,
                 }}
               />
+              <Text>{item.location}</Text>
             </View>
           </View>
         </View>
