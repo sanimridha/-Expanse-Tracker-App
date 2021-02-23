@@ -602,6 +602,9 @@ const home = () => {
       </View>
     );
   };
+  const renderChart = () => {
+    return <View></View>;
+  };
 
   return (
     <View style={{flex: 1, backgroundColor: COLORS.lightGray2}}>
@@ -619,6 +622,7 @@ const home = () => {
             {renderIncomingExpenses()}
           </View>
         )}
+        {viewMode == 'chart' && <View>{renderChart()}</View>}
       </ScrollView>
     </View>
   );
