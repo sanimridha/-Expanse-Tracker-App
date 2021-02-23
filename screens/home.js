@@ -460,7 +460,30 @@ const home = () => {
   };
 
   const renderIncomingExpenses = () => {
-    return <View>{renderIncomingExpensesTitle()}</View>;
+    let allExpenses = selectedCategory ? selectedCategory.expenses : [];
+    //Filter pending expenses
+    let incomingExpenses = allExpenses.filter((a) => a.status == 'P');
+    return (
+      <View>
+        {renderIncomingExpensesTitle()}
+
+        {incomingExpenses.length > 0 && <FlatList />}
+
+        {incomingExpenses.length == 0 && (
+          <View
+            style={{
+              alignItems: 'center',
+              justifyContent: 'center',
+              height: 300,
+            }}>
+            <Text
+              style={{color: COLORS.primary, ...FONTS.h3, fontWeight: 'bold'}}>
+              No Record
+            </Text>
+          </View>
+        )}
+      </View>
+    );
   };
 
   return (
