@@ -642,6 +642,10 @@ const home = () => {
   const renderChart = () => {
     let chartData = processCategoryDataToDisplay();
     let colorScales = chartData.map((item) => item.color);
+    let totalExpensesCount = chartData.reduce(
+      (a, b) => a + (b.expenseCount || 0),
+      0,
+    );
     return (
       <View style={{alignItems: 'center', justifyContent: 'center'}}>
         <VictoryPie
@@ -662,6 +666,10 @@ const home = () => {
           width={SIZES.width * 0.8}
           height={SIZES.width * 0.8}
         />
+        <View>
+          <Text>{totalExpensesCount}</Text>
+          <Text>Expenses</Text>
+        </View>
       </View>
     );
   };
