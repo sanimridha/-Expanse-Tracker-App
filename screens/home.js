@@ -553,6 +553,10 @@ const home = () => {
               </Text>
             </View>
           </View>
+          {/* Price */}
+          <View>
+            <Text>CONFIRM {item.total.toFixed(2)} USD</Text>
+          </View>
         </View>
       );
     };
