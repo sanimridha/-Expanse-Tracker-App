@@ -8,6 +8,8 @@ target 'ExpenseTracker' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+  pod 'RNSVG', :path => '../node_modules/react-native-svg'
+
   target 'ExpenseTrackerTests' do
     inherit! :complete
     # Pods for testing

@@ -617,13 +617,15 @@ const home = () => {
         id: item.id,
       };
     });
+    //Filter out categories with no data/expenses
+    let filterChartData = chartData.filter((a) => a.y > 0);
   };
 
   const renderChart = () => {
     let chartData = processCategoryDataToDisplay();
     return (
       <View>
-        <VictoryPie />
+        <VictoryPie data={chartData} />
       </View>
     );
   };
