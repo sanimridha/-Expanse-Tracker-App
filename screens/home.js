@@ -554,7 +554,15 @@ const home = () => {
             </View>
           </View>
           {/* Price */}
-          <View>
+          <View
+            style={{
+              height: 50,
+              alignItems: 'center',
+              justifyContent: 'center',
+              borderBottomStartRadius: SIZES.radius,
+              borderBottomEndRadius: SIZES.radius,
+              backgroundColor: selectedCategory.color,
+            }}>
             <Text>CONFIRM {item.total.toFixed(2)} USD</Text>
           </View>
         </View>
