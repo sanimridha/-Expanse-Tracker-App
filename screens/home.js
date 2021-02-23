@@ -514,6 +514,20 @@ const home = () => {
               }}>
               {item.description}
             </Text>
+            {/* location */}
+            <Text>Location</Text>
+            <View>
+              <Image
+                source={icons.pin}
+                resizeMode={'contain'}
+                style={{
+                  width: 20,
+                  height: 20,
+                  tintColor: COLORS.darkgray,
+                  marginRight: 5,
+                }}
+              />
+            </View>
           </View>
         </View>
       );
