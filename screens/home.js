@@ -503,9 +503,17 @@ const home = () => {
             </Text>
           </View>
           {/* Expenses Description */}
-          <View>
-            <Text>{item.title}</Text>
-            <Text>{item.description}</Text>
+          <View style={{paddingHorizontal: SIZES.padding}}>
+            {/* Title And Description */}
+            <Text style={{...FONTS.h2, fontWeight: 'bold'}}>{item.title}</Text>
+            <Text
+              style={{
+                ...FONTS.body3,
+                flexWrap: 'wrap',
+                color: COLORS.darkgray,
+              }}>
+              {item.description}
+            </Text>
           </View>
         </View>
       );
