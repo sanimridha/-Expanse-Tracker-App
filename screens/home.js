@@ -375,7 +375,15 @@ const home = () => {
             source={item.icon}
             style={{width: 20, height: 20, tintColor: item.color}}
           />
-          <Text>{item.name}</Text>
+          <Text
+            style={{
+              marginLeft: SIZES.base,
+              color: COLORS.primary,
+              ...FONTS.h4,
+              fontWeight: 'bold',
+            }}>
+            {item.name}
+          </Text>
         </TouchableOpacity>
       );
     };
