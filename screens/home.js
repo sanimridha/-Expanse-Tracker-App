@@ -467,8 +467,22 @@ const home = () => {
       return (
         <View>
           {/* title Section */}
-          <View>
-            <View>
+          <View
+            style={{
+              flexDirection: 'row',
+              padding: SIZES.padding,
+              alignItems: 'center',
+            }}>
+            <View
+              style={{
+                height: 50,
+                width: 50,
+                borderRadius: 25,
+                backgroundColor: COLORS.lightGray,
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginRight: SIZES.base,
+              }}>
               <Image
                 source={selectedCategory.icon}
                 resizeMode={'contain'}
