@@ -401,7 +401,12 @@ const home = () => {
             numColumns={2}
           />
         </View>
-        <TouchableOpacity>
+        <TouchableOpacity
+          style={{
+            flexDirection: 'row',
+            marginVertical: SIZES.base,
+            justifyContent: 'center',
+          }}>
           <Text>MORE</Text>
           <Image
             source={icons.down_arrow}
