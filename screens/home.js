@@ -389,7 +389,7 @@ const home = () => {
     };
 
     return (
-      <View>
+      <View style={{paddingHorizontal: SIZES.padding - 5}}>
         <View>
           <FlatList
             data={categories}
