@@ -8,7 +8,6 @@ import {
   ScrollView,
   FlatList,
 } from 'react-native';
-import {sqrt} from 'react-native-reanimated';
 import {COLORS, SIZES, FONTS, icons} from '../constants';
 const home = () => {
   //Dummy data
@@ -211,6 +210,7 @@ const home = () => {
   ];
   const [categories, setcategories] = useState(categoriesData);
   const [viewMode, setViewMode] = useState('chart');
+  const [selectedCategory, setSelectedCategory] = useState(null);
   const renderNavBar = () => {
     return (
       <View
@@ -372,7 +372,8 @@ const home = () => {
             borderRadius: 5,
             backgroundColor: COLORS.white,
             ...styles.shadow,
-          }}>
+          }}
+          onPress={() => setSelectedCategory(item)}>
           <Image
             source={item.icon}
             style={{width: 20, height: 20, tintColor: item.color}}
