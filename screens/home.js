@@ -46,6 +46,31 @@ const home = () => {
         },
       ],
     },
+    {
+      id: 2,
+      name: 'Nutrition',
+      icon: icons.food,
+      color: COLORS.lightBlue,
+      expenses: [
+        {
+          id: 5,
+          title: 'Vitamins',
+          description: 'Vitamin',
+          location: "Science Lab' Pharmacy",
+          total: 25.0,
+          status: pendingStatus,
+        },
+
+        {
+          id: 6,
+          title: 'Protein powder',
+          description: 'Protein',
+          location: "Banani' Pharmacy",
+          total: 50.0,
+          status: confirmStatus,
+        },
+      ],
+    },
   ];
   const [viewMode, setViewMode] = useState('chart');
   const renderNavBar = () => {
