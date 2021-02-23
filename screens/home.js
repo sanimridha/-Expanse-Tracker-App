@@ -666,7 +666,7 @@ const home = () => {
           width={SIZES.width * 0.8}
           height={SIZES.width * 0.8}
         />
-        <View>
+        <View style={{position: 'absolute', top: '42%', left: '42%'}}>
           <Text style={{...FONTS.h1, textAlign: 'center', fontWeight: 'bold'}}>
             {totalExpensesCount}
           </Text>
