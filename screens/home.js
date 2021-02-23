@@ -10,6 +10,7 @@ import {
   Animated,
 } from 'react-native';
 import {COLORS, SIZES, FONTS, icons} from '../constants';
+import {VictoryPie} from 'victory-native';
 const home = () => {
   //Dummy data
   const confirmStatus = 'C';
@@ -602,8 +603,17 @@ const home = () => {
       </View>
     );
   };
+  const processCategoryDataToDisplay = () => {
+    //filter Expenses with confirmed status
+  };
+
   const renderChart = () => {
-    return <View></View>;
+    let chartData = processCategoryDataToDisplay();
+    return (
+      <View>
+        <VictoryPie />
+      </View>
+    );
   };
 
   return (
