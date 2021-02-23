@@ -465,7 +465,16 @@ const home = () => {
     let incomingExpenses = allExpenses.filter((a) => a.status == 'P');
     const renderItem = ({item, index}) => {
       return (
-        <View>
+        <View
+          style={{
+            width: 300,
+            marginRight: SIZES.padding,
+            marginLeft: index == 0 ? SIZES.padding : 0,
+            marginVertical: SIZES.radius,
+            borderRadius: SIZES.radius,
+            backgroundColor: COLORS.white,
+            ...styles.shadow,
+          }}>
           {/* title Section */}
           <View
             style={{
