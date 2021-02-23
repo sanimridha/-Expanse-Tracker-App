@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import {
   StyleSheet,
   Text,
@@ -7,6 +7,7 @@ import {
   Image,
   ScrollView,
   FlatList,
+  Animated,
 } from 'react-native';
 import {COLORS, SIZES, FONTS, icons} from '../constants';
 const home = () => {
@@ -208,6 +209,8 @@ const home = () => {
       ],
     },
   ];
+  const categoryListHeightAnimationValue = useRef(new Animated.Value(115))
+    .current;
   const [categories, setcategories] = useState(categoriesData);
   const [viewMode, setViewMode] = useState('chart');
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -394,14 +397,14 @@ const home = () => {
 
     return (
       <View style={{paddingHorizontal: SIZES.padding - 5}}>
-        <View>
+        <Animated.View style={{height: categoryListHeightAnimationValue}}>
           <FlatList
             data={categories}
             renderItem={renderItem}
             keyExtractor={(item) => `${item.id}`}
             numColumns={2}
           />
-        </View>
+        </Animated.View>
         <TouchableOpacity
           style={{
             flexDirection: 'row',
