@@ -479,7 +479,14 @@ const home = () => {
                 }}
               />
             </View>
-            <Text>{selectedCategory.name}</Text>
+            <Text
+              style={{
+                ...FONTS.h3,
+                color: selectedCategory.color,
+                fontWeight: 'bold',
+              }}>
+              {selectedCategory.name}
+            </Text>
           </View>
         </View>
       );
