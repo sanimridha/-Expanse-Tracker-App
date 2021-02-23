@@ -200,6 +200,7 @@ const home = () => {
       ],
     },
   ];
+  const [categories, setcategories] = useState(categoriesData);
   const [viewMode, setViewMode] = useState('chart');
   const renderNavBar = () => {
     return (
@@ -299,7 +300,9 @@ const home = () => {
             style={{color: COLORS.primary, ...FONTS.h3, fontWeight: 'bold'}}>
             CATEGORIES
           </Text>
-          <Text style={{color: COLORS.darkgray, ...FONTS.body4}}> Total</Text>
+          <Text style={{color: COLORS.darkgray, ...FONTS.body4}}>
+            {categories.length} Total
+          </Text>
         </View>
         {/* Buttons */}
         <View style={{flexDirection: 'row'}}>
