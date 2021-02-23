@@ -463,6 +463,28 @@ const home = () => {
     let allExpenses = selectedCategory ? selectedCategory.expenses : [];
     //Filter pending expenses
     let incomingExpenses = allExpenses.filter((a) => a.status == 'P');
+    const renderItem = ({item, index}) => {
+      return (
+        <View>
+          {/* title Section */}
+          <View>
+            <View>
+              <Image
+                source={selectedCategory.icon}
+                resizeMode={'contain'}
+                style={{
+                  width: 30,
+                  height: 30,
+                  tintColor: selectedCategory.color,
+                }}
+              />
+            </View>
+            <Text>{selectedCategory.name}</Text>
+          </View>
+        </View>
+      );
+    };
+
     return (
       <View>
         {renderIncomingExpensesTitle()}
