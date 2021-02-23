@@ -635,6 +635,7 @@ const home = () => {
         id: item.id,
       };
     });
+    return finalChartData;
   };
 
   const renderChart = () => {
