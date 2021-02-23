@@ -444,9 +444,23 @@ const home = () => {
       </View>
     );
   };
+  const renderIncomingExpensesTitle = () => {
+    return (
+      <View
+        style={{
+          padding: SIZES.padding,
+          backgroundColor: COLORS.lightGray2,
+        }}>
+        <Text style={{...FONTS.h3, color: COLORS.primary, fontWeight: 'bold'}}>
+          INCOMING EXPENSES
+        </Text>
+        <Text style={{...FONTS.body4, color: COLORS.darkgray}}>12 Total</Text>
+      </View>
+    );
+  };
 
   const renderIncomingExpenses = () => {
-    <View></View>;
+    return <View>{renderIncomingExpensesTitle()}</View>;
   };
 
   return (
