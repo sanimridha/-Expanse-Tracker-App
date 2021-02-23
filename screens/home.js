@@ -407,7 +407,7 @@ const home = () => {
             marginVertical: SIZES.base,
             justifyContent: 'center',
           }}>
-          <Text>MORE</Text>
+          <Text style={{...FONTS.body4}}>More</Text>
           <Image
             source={icons.down_arrow}
             resizeMode={'contain'}
