@@ -467,7 +467,15 @@ const home = () => {
       <View>
         {renderIncomingExpensesTitle()}
 
-        {incomingExpenses.length > 0 && <FlatList />}
+        {incomingExpenses.length > 0 && (
+          <FlatList
+            data={incomingExpenses}
+            renderItem={renderItem}
+            keyExtractor={(item) => `${item.id}`}
+            horizontal
+            showsHorizontalScrollIndicator={false}
+          />
+        )}
 
         {incomingExpenses.length == 0 && (
           <View
