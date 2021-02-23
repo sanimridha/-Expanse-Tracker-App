@@ -71,6 +71,46 @@ const home = () => {
         },
       ],
     },
+    {
+      id: 3,
+      name: 'Child',
+      icon: icons.baby_car,
+      color: COLORS.darkgreen,
+      expenses: [
+        {
+          id: 7,
+          title: 'Toys',
+          description: 'toys',
+          location: "Uttara' Toy Store",
+          total: 25.0,
+          status: confirmStatus,
+        },
+        {
+          id: 8,
+          title: 'Baby Car Seat',
+          description: 'Baby Car Seat',
+          location: "Jamuna Future Park' Baby Care Store",
+          total: 100.0,
+          status: pendingStatus,
+        },
+        {
+          id: 9,
+          title: 'Pampers',
+          description: 'Pampers',
+          location: "New-Market' Supermarket",
+          total: 100.0,
+          status: pendingStatus,
+        },
+        {
+          id: 10,
+          title: 'Baby T-Shirt',
+          description: 'T-Shirt',
+          location: "Bashundhara' Fashion Store",
+          total: 20.0,
+          status: pendingStatus,
+        },
+      ],
+    },
   ];
   const [viewMode, setViewMode] = useState('chart');
   const renderNavBar = () => {
