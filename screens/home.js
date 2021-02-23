@@ -361,7 +361,16 @@ const home = () => {
   const renderCategoryList = () => {
     const renderItem = ({item}) => {
       return (
-        <TouchableOpacity>
+        <TouchableOpacity
+          style={{
+            flex: 1,
+            flexDirection: 'row',
+            margin: 5,
+            paddingVertical: SIZES.radius,
+            paddingHorizontal: SIZES.padding,
+            borderRadius: 5,
+            backgroundColor: COLORS.white,
+          }}>
           <Image
             source={item.icon}
             style={{width: 20, height: 20, tintColor: item.color}}
