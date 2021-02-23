@@ -111,6 +111,46 @@ const home = () => {
         },
       ],
     },
+    {
+      id: 4,
+      name: 'Beauty & Care',
+      icon: icons.healthcare,
+      color: COLORS.peach,
+      expenses: [
+        {
+          id: 11,
+          title: 'Skin Care product',
+          description: 'skin care',
+          location: "Banasri' Pharmacy",
+          total: 10.0,
+          status: pendingStatus,
+        },
+        {
+          id: 12,
+          title: 'Lotion',
+          description: 'Lotion',
+          location: "Rampura' Pharmacy",
+          total: 50.0,
+          status: confirmStatus,
+        },
+        {
+          id: 13,
+          title: 'Face Mask',
+          description: 'Face Mask',
+          location: "Baridhara' Pharmacy",
+          total: 50.0,
+          status: pendingStatus,
+        },
+        {
+          id: 14,
+          title: 'Sunscreen cream',
+          description: 'Sunscreen cream',
+          location: "Nikunja' Pharmacy",
+          total: 50.0,
+          status: pendingStatus,
+        },
+      ],
+    },
   ];
   const [viewMode, setViewMode] = useState('chart');
   const renderNavBar = () => {
