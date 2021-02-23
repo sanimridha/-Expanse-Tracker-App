@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import {COLORS, SIZES, FONTS, icons} from '../constants';
 import {VictoryPie} from 'victory-native';
+import {sin} from 'react-native/Libraries/Animated/src/Easing';
 const home = () => {
   //Dummy data
   const confirmStatus = 'C';
@@ -643,7 +644,24 @@ const home = () => {
     let colorScales = chartData.map((item) => item.color);
     return (
       <View>
-        <VictoryPie data={chartData} colorScale={colorScales} />
+        <VictoryPie
+          data={chartData}
+          colorScale={colorScales}
+          labels={(datum) => `${datum.y}`}
+          radius={SIZES.width * 0.4 - 10}
+          innerRadius={70}
+          labelRadius={({innerRadius}) =>
+            (SIZES.width * 0.4 + innerRadius) / 2.5
+          }
+          style={{
+            labels: {fill: COLORS.white, ...FONTS.body3},
+            parent: {
+              ...styles.shadow,
+            },
+          }}
+          width={SIZES.width * 0.8}
+          height={SIZES.width * 0.8}
+        />
       </View>
     );
   };
