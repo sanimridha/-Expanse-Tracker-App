@@ -734,8 +734,16 @@ const home = () => {
             </Text>
           </View>
           {/* Expenses */}
-          <View>
-            <Text>
+          <View
+            style={{
+              justifyContent: 'center',
+            }}>
+            <Text
+              style={{
+                color: COLORS.white,
+                ...FONTS.h3,
+                fontWeight: 'bold',
+              }}>
               {item.y} USD - {item.label}
             </Text>
           </View>
