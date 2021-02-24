@@ -713,7 +713,7 @@ const home = () => {
       return (
         <TouchableOpacity>
           {/* Name/Category */}
-          <View>
+          <View style={{flex: 1, flexDirection: 'row', alignItems: 'center'}}>
             <View
               style={{
                 width: 20,
