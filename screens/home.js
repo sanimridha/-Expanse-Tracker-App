@@ -665,6 +665,23 @@ const home = () => {
           }}
           width={SIZES.width * 0.8}
           height={SIZES.width * 0.8}
+          events={[
+            {
+              target: 'data',
+              eventHandlers: {
+                onPress: () => {
+                  return [
+                    {
+                      target: 'labels',
+                      mutation: (props) => {
+                        let categoryName = chartData[props.index].name;
+                      },
+                    },
+                  ];
+                },
+              },
+            },
+          ]}
         />
         <View style={{position: 'absolute', top: '42%', left: '42%'}}>
           <Text style={{...FONTS.h1, textAlign: 'center', fontWeight: 'bold'}}>
