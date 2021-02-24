@@ -711,14 +711,21 @@ const home = () => {
     let data = processCategoryDataToDisplay();
     const renderItem = ({item}) => {
       return (
-        <TouchableOpacity>
+        <TouchableOpacity
+          style={{
+            flexDirection: 'row',
+            height: 40,
+            paddingHorizontal: SIZES.radius,
+            borderRadius: 10,
+            backgroundColor: item.color,
+          }}>
           {/* Name/Category */}
           <View style={{flex: 1, flexDirection: 'row', alignItems: 'center'}}>
             <View
               style={{
                 width: 20,
                 height: 20,
-                backgroundColor: 'red',
+                backgroundColor: COLORS.white,
                 borderRadius: 5,
               }}></View>
             <Text>{item.name}</Text>
