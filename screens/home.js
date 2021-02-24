@@ -728,7 +728,10 @@ const home = () => {
                 backgroundColor: COLORS.white,
                 borderRadius: 5,
               }}></View>
-            <Text>{item.name}</Text>
+            <Text
+              style={{marginLeft: SIZES.base, ...FONTS.h3, fontWeight: 'bold'}}>
+              {item.name}
+            </Text>
           </View>
         </TouchableOpacity>
       );
