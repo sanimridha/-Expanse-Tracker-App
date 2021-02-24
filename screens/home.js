@@ -722,6 +722,10 @@ const home = () => {
               selectedCategory && selectedCategory.name == item.name
                 ? item.color
                 : COLORS.white,
+          }}
+          onPress={() => {
+            let categoryName = item.name;
+            setSelectCategoryByName(categoryName);
           }}>
           {/* Name/Category */}
           <View style={{flex: 1, flexDirection: 'row', alignItems: 'center'}}>
