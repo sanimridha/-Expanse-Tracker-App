@@ -733,6 +733,12 @@ const home = () => {
               {item.name}
             </Text>
           </View>
+          {/* Expenses */}
+          <View>
+            <Text>
+              {item.y} USD - {item.label}
+            </Text>
+          </View>
         </TouchableOpacity>
       );
     };
