@@ -714,6 +714,13 @@ const home = () => {
         <TouchableOpacity>
           {/* Name/Category */}
           <View>
+            <View
+              style={{
+                width: 20,
+                height: 20,
+                backgroundColor: 'red',
+                borderRadius: 5,
+              }}></View>
             <Text>{item.name}</Text>
           </View>
         </TouchableOpacity>
