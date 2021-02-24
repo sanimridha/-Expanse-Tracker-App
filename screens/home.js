@@ -638,7 +638,10 @@ const home = () => {
     });
     return finalChartData;
   };
-
+  const setselectedCategoryByName = (name) => {
+    let category = categories.filter((a) => a.name == name);
+    setSelectedCategory(category[0]);
+  };
   const renderChart = () => {
     let chartData = processCategoryDataToDisplay();
     let colorScales = chartData.map((item) => item.color);
@@ -646,6 +649,7 @@ const home = () => {
       (a, b) => a + (b.expenseCount || 0),
       0,
     );
+
     return (
       <View style={{alignItems: 'center', justifyContent: 'center'}}>
         <VictoryPie
@@ -675,6 +679,7 @@ const home = () => {
                       target: 'labels',
                       mutation: (props) => {
                         let categoryName = chartData[props.index].name;
+                        setselectedCategoryByName(categoryName);
                       },
                     },
                   ];
