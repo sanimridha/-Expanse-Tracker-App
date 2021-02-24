@@ -710,7 +710,14 @@ const home = () => {
   const renderExpensesSummary = () => {
     let data = processCategoryDataToDisplay();
     const renderItem = ({item}) => {
-      return <TouchableOpacity></TouchableOpacity>;
+      return (
+        <TouchableOpacity>
+          {/* Name/Category */}
+          <View>
+            <Text>{item.name}</Text>
+          </View>
+        </TouchableOpacity>
+      );
     };
 
     return (
