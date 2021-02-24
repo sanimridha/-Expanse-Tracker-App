@@ -11,7 +11,6 @@ import {
 } from 'react-native';
 import {COLORS, SIZES, FONTS, icons} from '../constants';
 import {VictoryPie} from 'victory-native';
-import {sin} from 'react-native/Libraries/Animated/src/Easing';
 const home = () => {
   //Dummy data
   const confirmStatus = 'C';
@@ -638,7 +637,7 @@ const home = () => {
     });
     return finalChartData;
   };
-  const setselectedCategoryByName = (name) => {
+  const setSelectCategoryByName = (name) => {
     let category = categories.filter((a) => a.name == name);
     setSelectedCategory(category[0]);
   };
@@ -683,7 +682,7 @@ const home = () => {
                       target: 'labels',
                       mutation: (props) => {
                         let categoryName = chartData[props.index].name;
-                        setselectedCategoryByName(categoryName);
+                        setSelectCategoryByName(categoryName);
                       },
                     },
                   ];
