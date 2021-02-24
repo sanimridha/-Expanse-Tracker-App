@@ -707,6 +707,22 @@ const home = () => {
       </View>
     );
   };
+  const renderExpensesSummary = () => {
+    let data = processCategoryDataToDisplay();
+    const renderItem = ({item}) => {
+      return <TouchableOpacity></TouchableOpacity>;
+    };
+
+    return (
+      <View style={{padding: SIZES.padding}}>
+        <FlatList
+          data={data}
+          renderItem={renderItem}
+          keyExtractor={(item) => `${item.id}`}
+        />
+      </View>
+    );
+  };
 
   return (
     <View style={{flex: 1, backgroundColor: COLORS.lightGray2}}>
@@ -724,7 +740,12 @@ const home = () => {
             {renderIncomingExpenses()}
           </View>
         )}
-        {viewMode == 'chart' && <View>{renderChart()}</View>}
+        {viewMode == 'chart' && (
+          <View>
+            {renderChart()}
+            {renderExpensesSummary()}
+          </View>
+        )}
       </ScrollView>
     </View>
   );
