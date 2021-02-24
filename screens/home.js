@@ -656,7 +656,11 @@ const home = () => {
           data={chartData}
           colorScale={colorScales}
           labels={(datum) => `${datum.y}`}
-          radius={SIZES.width * 0.4 - 10}
+          radius={({datum}) =>
+            selectedCategory && selectedCategory.name == datum.name
+              ? SIZES.width * 0.4
+              : SIZES.width * 0.4 - 10
+          }
           innerRadius={70}
           labelRadius={({innerRadius}) =>
             (SIZES.width * 0.4 + innerRadius) / 2.5
