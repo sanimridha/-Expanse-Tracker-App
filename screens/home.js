@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import {COLORS, SIZES, FONTS, icons} from '../constants';
 import {VictoryPie} from 'victory-native';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
 const home = () => {
   //Dummy data
   const confirmStatus = 'C';
@@ -717,7 +718,10 @@ const home = () => {
             height: 40,
             paddingHorizontal: SIZES.radius,
             borderRadius: 10,
-            backgroundColor: item.color,
+            backgroundColor:
+              selectedCategory && selectedCategory.name == item.name
+                ? item.color
+                : COLORS.white,
           }}>
           {/* Name/Category */}
           <View style={{flex: 1, flexDirection: 'row', alignItems: 'center'}}>
@@ -725,11 +729,22 @@ const home = () => {
               style={{
                 width: 20,
                 height: 20,
-                backgroundColor: COLORS.white,
+                backgroundColor:
+                  selectedCategory && selectedCategory.name == item.name
+                    ? COLORS.white
+                    : item.color,
                 borderRadius: 5,
               }}></View>
             <Text
-              style={{marginLeft: SIZES.base, ...FONTS.h3, fontWeight: 'bold'}}>
+              style={{
+                marginLeft: SIZES.base,
+                ...FONTS.h3,
+                fontWeight: 'bold',
+                color:
+                  selectedCategory && selectedCategory.name == item.name
+                    ? COLORS.white
+                    : COLORS.primary,
+              }}>
               {item.name}
             </Text>
           </View>
@@ -740,7 +755,10 @@ const home = () => {
             }}>
             <Text
               style={{
-                color: COLORS.white,
+                color:
+                  selectedCategory && selectedCategory.name == item.name
+                    ? COLORS.white
+                    : COLORS.primary,
                 ...FONTS.h3,
                 fontWeight: 'bold',
               }}>
